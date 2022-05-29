@@ -21,6 +21,8 @@ div.main-header {
 	text-align: center;
 	color: var(--bg-color);
 	background-color: var(--fg-color);
+	background-image: url("images/banner.png");
+	background-position: center;
 }
 
 h1.main-header {
@@ -29,10 +31,16 @@ h1.main-header {
 	font-size: 400%;
 }
 
+a.arrow {
+	text-decoration: none;
+	color: var(--bg-color);
+}
+
 header {
 	width: 100vw;
 	margin: 0;
 	padding: 0;
+	padding-top: 5px;
 	background-color: var(--fg-color);
 	color: var(--bg-color);
 	font-family: sans-serif;
@@ -46,14 +54,14 @@ header ul {
 }
 
 header li {
-	padding: 10px;
+	padding: 16px;
 	display: inline;
 }
 
 header a {
 	color: var(--bg-color);
 	text-decoration: none;
-	font-size: 120%;
+	font-size: 140%;
 	transition-duration: 200ms;
 }
 
@@ -70,8 +78,15 @@ header a:hover {
 }
 
 @media (max-width: 1090px) {
-	margin: 0;
-	max-width: 90%;
+	header a {
+		font-size: 300%;
+	}
+
+	.content {
+		padding-left: 10px;
+		margin: 0;
+		max-width: 90%;
+	}
 }
 
 pre {
