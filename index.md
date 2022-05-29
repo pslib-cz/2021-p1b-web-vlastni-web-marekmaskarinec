@@ -1,8 +1,10 @@
 </div>
-<!--<div class="main-header">
+<div class="main-header">
   <h1 class="main-header">{>ASCIILASERS>}</h1>
-</div>-->
-<div class="content">
+</div>
+<div class="content" id="content">
+
+# AsciiLasers
 
 AsciiLasers is an esoteric text based visual programming language. The language
 is based around lasers which travel between blocks and mirrors on a board.

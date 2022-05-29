@@ -19,13 +19,14 @@ a {
 div.main-header {
 	height: 100vh;
 	text-align: center;
-	font-size: 6em;
 	color: var(--bg-color);
 	background-color: var(--fg-color);
 }
 
 h1.main-header {
+	margin: 0;
 	padding-top: 35vh;
+	font-size: 400%;
 }
 
 header {
@@ -39,30 +40,45 @@ header {
 }
 
 header ul {
+	padding: 0;
+	margin: 0;
 	list-style-type: none;
 }
 
 header li {
+	padding: 10px;
 	display: inline;
 }
 
 header a {
 	color: var(--bg-color);
 	text-decoration: none;
-	font-size: 13pt;
+	font-size: 120%;
+	transition-duration: 200ms;
+}
+
+header a:hover {
+	color: lightgray;
 }
 
 .content {
-	margin: 16px auto;
-	display: table;
+	margin: 5% auto;
+	margin-top: 0;
+	margin-bottom: 0;
 	font-size: 150%;
 	max-width: 50%;
+}
+
+@media (max-width: 1090px) {
+	margin: 0;
+	max-width: 90%;
 }
 
 pre {
 	padding: 20px;
 	background-color: lightgrey;
 	border-radius: 10px;
+	font-size: 1.4vw;
 }
 
 code {
@@ -77,6 +93,10 @@ table {
 table, th, td {
 	border: 1px solid;
 	padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: sans-serif;
 }
 
 /*body {
