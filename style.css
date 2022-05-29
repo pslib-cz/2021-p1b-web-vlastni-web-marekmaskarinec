@@ -78,6 +78,10 @@ header a:hover {
 }
 
 @media (max-width: 1090px) {
+	div.main-header {
+		background-position: left;
+	}
+
 	header a {
 		font-size: 300%;
 	}

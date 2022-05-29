@@ -65,7 +65,6 @@ X | `\` | region corner
 X | `]` | comment end
 X | `^` | mirror
 X | `_` | input
-. | ``` |
 X | `a` | addition
 . | `b` |
 . | `c` |

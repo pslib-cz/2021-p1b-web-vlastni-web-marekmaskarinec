@@ -4,6 +4,7 @@ The core module implements basic laser modifiers, mirrors, stdout and stdin.
 ## Mirrors
 
 There are 4 mirror blocks:  
+
 Symbol | Description
 -------|-------------
 `^`    | Reflects all lasers up

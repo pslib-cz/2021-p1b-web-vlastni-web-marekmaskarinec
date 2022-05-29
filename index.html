@@ -11,8 +11,7 @@
 		<nav>
 			<ul>
 				<li class="homepage"><a href="index.html">ASCIILASERS</a></li>
-				<li><a href="wire.html">WIRE</a></li>
-				<li><a href="list.html">LIST</a></li>
+				<li><a href="docs.html">DOCS</a></li>
 				<li><a href="examples.html">EXAMPLES</a></li>
 			</ul>
 		</nav>
@@ -32,7 +31,7 @@
 <p><span id="content-start" /></p>
 <p>AsciiLasers is an esoteric text based visual programming language.
 The language is based around lasers which travel between blocks and
-mirrors on a board. AL code file extension is <code>.al</code>.</p>
+mirrors on a board.</p>
 <p>Hello world program in AsciiLasers:</p>
 <pre><code>         [h   e   l   l   o   _   w   o   r   l   d]
 {&gt;A&gt;*&gt; m&gt; *&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;i&gt;d&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*
@@ -84,9 +83,17 @@ Example:</p>
 <pre><code>this is not comment [ but this is
 this is still comment this too and this [ this too
 this still is ] this is not</code></pre>
-<h2 id="used-symbols">Used symbols</h2>
-<p><a href="used.html">Map of used symbols that I try to keep
-updated</a></p>
+<h2 id="implementations">Implementations</h2>
+<p>There are currently three AsciiLasers implementations, non of which
+are complete. <a
+href="https://github.com/marekmaskarinec/asciilasers-go">asciilasers-go</a>
+which supports core except functions and has somewhat working wire
+implementation. <a
+href="https://github.com/asciilasers-cs/asciilasers-cs">asciilasers-cs</a>
+it only supports core (without functions), but is generally faster and
+hase better visualisations than asciilasers-go. Both of these
+implementations have been abandoned in favor of claser - a scheme
+implementation with a c vm, currently being developed in private.</p>
 	</div>
 </body>
 </html>

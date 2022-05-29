@@ -11,18 +11,20 @@
 		<nav>
 			<ul>
 				<li class="homepage"><a href="index.html">ASCIILASERS</a></li>
-				<li><a href="wire.html">WIRE</a></li>
-				<li><a href="list.html">LIST</a></li>
+				<li><a href="docs.html">DOCS</a></li>
 				<li><a href="examples.html">EXAMPLES</a></li>
 			</ul>
 		</nav>
 	</header>
 	<div class="content" id="content">
 		<h1 id="al-wire">AL Wire</h1>
+<p>The wire module adds wires, which can be used to dynamically alter
+boards.</p>
 <h3 id="current">Current</h3>
-<p>Current is a pulse. It moves instantly along the entire wire. When
-block gets powered by current, it alters its state either from A to B or
-B to A:</p>
+<p>When a block sends a current, it instantly travels as a pulse across
+the whole circuit, toggling the state of every block on the said
+circuit.</p>
+<p>States:</p>
 <table>
 <thead>
 <tr class="header">
@@ -57,9 +59,11 @@ B to A:</p>
 </tr>
 </tbody>
 </table>
-<p>Wire can transport current.<br />
-There are 5 wire blocks:</p>
-<h4 id="section"><code>@</code></h4>
+<h2 id="wire-blocks">Wire blocks</h2>
+<p>As opposed to normal blocks, wire blocks don’t change their state
+upon receiving current. Instead they either create, transport or
+proccess current.</p>
+<h3 id="section"><code>@</code></h3>
 <p>Laser detector. Interacts with Laser the same exact way as a
 <code>*</code> block does. But unlike <code>*</code>, <code>@</code>
 sends pulse over any connected wire when it gets evaluated.</p>
@@ -73,11 +77,11 @@ sends pulse over any connected wire when it gets evaluated.</p>
 mirror.</p>
 <p>// TODO: demonstrate double button single tick double state
 switch</p>
-<h4 id="z"><code>z</code></h4>
+<h3 id="z"><code>z</code></h3>
 <p>Like <code>@</code> but ignores lasers that have zero value.</p>
-<h4 id="section-1"><code>-</code>, <code>|</code></h4>
+<h3 id="section-1"><code>-</code>, <code>|</code></h3>
 <p>Vertical and horizontal wire respectively.</p>
-<h4 id="section-2"><code>+</code></h4>
+<h3 id="section-2"><code>+</code></h3>
 <p>Wire crossing. Wires are not connected.<br />
 For example:<br />
 3 unconnected wires crossing each other.</p>
@@ -91,7 +95,7 @@ For example:<br />
 -++-
 -+O
  |</code></pre>
-<h4 id="o"><code>O</code></h4>
+<h3 id="o"><code>O</code></h3>
 <p>Wire crossing. Wires are connected. Only horizontal wires above and
 below, vertical wires to the left and right and other wire crossing are
 connected.<br />

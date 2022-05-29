@@ -9,7 +9,6 @@
 
 AsciiLasers is an esoteric text based visual programming language. The language
 is based around lasers which travel between blocks and mirrors on a board.
-AL code file extension is `.al`.
 
 Hello world program in AsciiLasers:
 
@@ -68,6 +67,12 @@ this is still comment this too and this [ this too
 this still is ] this is not
 ```
 
-## Used symbols
-[Map of used symbols that I try to keep updated](used.html)
+## Implementations
+
+There are currently three AsciiLasers implementations, non of which are complete.
+[asciilasers-go](https://github.com/marekmaskarinec/asciilasers-go) which supports
+core except functions and has somewhat working wire implementation. [asciilasers-cs](https://github.com/asciilasers-cs/asciilasers-cs) it only supports core (without functions),
+but is generally faster and hase better visualisations than asciilasers-go.
+Both of these implementations have been abandoned in favor of claser - a scheme
+implementation with a c vm, currently being developed in private.
 
