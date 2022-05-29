@@ -1,0 +1,37 @@
+
+import (
+	"std.um"
+	"coulau/strings.um"
+	"coulau/filepath.um"
+)
+
+fn readall(fname: str): str {
+    f := std.fopen(fname, "r")
+    if f == null {
+        printf("could not find %s\n", fname)
+        return ""
+    }
+
+    const blockSize = 16
+    res := ""
+    for ok := true; ok {
+	    var buff: [blockSize + 1]char
+	    ok = std.fread(f, ^[blockSize]char(&buff)) == 1
+	    res += str([]char(buff))
+    }
+
+    std.fclose(f)
+    return res
+}
+
+fn main() {
+	template := readall(std.argv(1))
+	inp := std.argv(3)
+	
+	_, fname := filepath.split(strings.split(std.argv(2), ".")[0])
+
+	inp = strings.replace(template, "__content__", inp)
+	inp = strings.replace(inp, "__title__", strings.replace(fname, "_", " "))
+
+	printf("%s\n", inp)
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>README</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li class="homepage"><a href="index.html">ASCIILASERS</a></li>
+				<li><a href="wire.html">WIRE</a></li>
+				<li><a href="list.html">LIST</a></li>
+				<li><a href="examples.html">EXAMPLES</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="content">
+		<p><a
+href="https://classroom.github.com/online_ide?assignment_repo_id=7841886&amp;assignment_repo_type=AssignmentRepo"><img
+src="https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg"
+alt="Open in Visual Studio Code" /></a> # Vlastní webová stránka</p>
+<p>Vytvořte vlastní malý tématický web pomocí HTML a CSS. Toto zadání
+slouží jako závěrečná práce a finální rekapitulace probraného učiva
+webové větve předmětu ALGoritmizace.</p>
+<p>Web může a musí být na libovolné přijatelné téma. Pokud Vás žádné
+téma nenapadá, použijte téma referátu na IKT. Text ani obrázky nemusí
+být nutně Vaše.</p>
+<p>Pro pojmenování tříd je doporučená metodika <a
+href="http://getbem.com/introduction/">BEM</a>.</p>
+<p>Editací tohoto souboru a náhradou <code>[ ]</code> za
+<code>[x]</code> můžete evidovat, které body zadání už máte splněné.</p>
+<h2 id="body-zadání">Body zadání</h2>
+<h3 id="html-struktura-souborů">HTML, struktura souborů</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+Web má alespoň dvě stránky provázané společnými styly</li>
+<li><input type="checkbox" disabled="" />
+HTML kód je validní bez chyb ve <a
+href="https://validator.w3.org/">validátoru</a></li>
+<li><input type="checkbox" disabled="" />
+HTML značky dávají smysl, kód obsahuje <code>&lt;article&gt;</code>,
+<code>&lt;section&gt;</code>, <code>&lt;header&gt;</code>,
+<code>&lt;nav&gt;</code>.</li>
+<li><input type="checkbox" disabled="" />
+Navigace mezi stránkami je tvořená přes
+<code>&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a&gt;</code> a je funkční i po
+zkopírování na lokální disk</li>
+<li><input type="checkbox" disabled="" />
+Soubory webu jsou členěny do složek (např. <code>/styles</code>,
+<code>/images</code>, <code>/fonts</code>)</li>
+<li><input type="checkbox" disabled="" />
+Soubory webu se nacházejí v GitHubovém repozitáři</li>
+<li><input type="checkbox" disabled="" />
+V repozitáři se soubory ocitly pomocí commitů a pushů a těch je více než
+3, rozprostřených do celé doby vypracovávání zadání</li>
+<li><input type="checkbox" disabled="" />
+Web je dostupný přes Github Pages (do README.md přidejte odkaz)</li>
+<li><input type="checkbox" disabled="" />
+Celková načítaná velikost jednotlivých stránek nepřesahuje jednotky
+MiB</li>
+<li><input type="checkbox" disabled="" />
+Stránka obsahuje formátovaný seznam zdrojů textu a obrázků</li>
+</ul>
+<h3 id="css-vzhled">CSS, vzhled</h3>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+Stránky používají několik souborů stylů, jeden z nich je <a
+href="https://necolas.github.io/normalize.css/">normalize</a></li>
+<li><input type="checkbox" disabled="" />
+Ke stránkám jsou připojeny externí fonty (např. přes <a
+href="https://fonts.google.com/">Google Fonts</a>)</li>
+<li><input type="checkbox" disabled="" />
+Stránka obsahuje horizontální nebo vertikální menu s odkazy na celou
+plochu nabídky</li>
+<li><input type="checkbox" disabled="" />
+Vzhled stránek je zamýšlen na mobilní telefon pro rozměr od cca 360px do
+960px. Content-wrapper má omezení na
+<code>max-width: 960px; margin: 0 auto;</code></li>
+<li><input type="checkbox" disabled="" />
+Obrázky mají rozumnou velikost pro mobilní telefon</li>
+<li><input type="checkbox" disabled="" />
+Velikosti písem jsou odvozeny od kořenového elementu</li>
+<li><input type="checkbox" disabled="" />
+Velikosti mezer kolem prvku jsou odvozeny od velikosti písma
+elementu</li>
+<li><input type="checkbox" disabled="" />
+Web používá omezenou paletu barev a mezer (lze zajistit přes <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">proměnné
+v CSS</a>)</li>
+<li><input type="checkbox" disabled="" />
+Barevné schéma je vkusné a odpovídá tématu. Inspiraci můžete čerpat z <a
+href="https://coolors.co/palettes/trending">editoru palet</a></li>
+<li><input type="checkbox" disabled="" />
+Šířka hlavního bloku stránky je omezená (tedy používá například
+<code>width</code>, <code>margin</code>, <code>max-width</code>)</li>
+<li><input type="checkbox" disabled="" />
+Web obsahuje obrázek v záhlaví zobrazovaný na celou velikost/výšku
+obrazovky</li>
+</ul>
+<pre><code>.main-header {
+    background-image: url(img_bg.jpg);
+    min-height: 100vh;
+}</code></pre>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+Styly definují vzhled prvků podle typografických zvyklosti (velikosti
+nadpisů, formát odstavců)</li>
+<li><input type="checkbox" disabled="" />
+Odkazy (například menu) využívají efekt <code>hover</code></li>
+<li><input type="checkbox" disabled="" />
+Za nebo před odkazy v textu je přidána ikonka (např. šipka) (využití
+<code>::before</code> nebo <code>::after</code>)</li>
+</ul>
+<h3 id="vyzkoušejte-nad-rámec-probrané-látky">Vyzkoušejte nad rámec
+probrané látky</h3>
+<p>Po splnění předchozích bodů</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+Na webu je použitý jednoduchý efekt <a
+href="https://www.w3schools.com/howto/howto_css_parallax.asp">paralaxního
+obrázku</a></li>
+<li><input type="checkbox" disabled="" />
+Pro layout stránky je použit <a
+href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flex</a></li>
+<li><input type="checkbox" disabled="" />
+Jsou použity ikonky přes Font Awesome nebo <a
+href="https://icomoon.io/">IcoMoon</a></li>
+<li><input type="checkbox" disabled="" />
+vytvořte galerii obrázků tvořenou náhledy vedle sebe
+(<code>display: flex</code> nebo <code>inline-block</code>)</li>
+<li><input type="checkbox" disabled="" />
+Použijte pozadí přes lineární nebo radiální gradient</li>
+<li><input type="checkbox" disabled="" />
++ jakékoli další vylepšení, kterým chcete zanechat přetrvávající
+dojem</li>
+</ul>
+<h2 id="kde-hledat-řešení-a-inspiraci">Kde hledat řešení a
+inspiraci?</h2>
+<ul>
+<li><a href="https://css-tricks.com/guides/">CSS Tricks Guides</a></li>
+<li><a href="http://getbem.com/introduction/">Metodika BEM</a></li>
+</ul>
+	</div>
+</body>
+</html>
+

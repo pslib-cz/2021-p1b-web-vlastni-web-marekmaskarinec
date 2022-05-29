@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>wire</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li class="homepage"><a href="index.html">ASCIILASERS</a></li>
+				<li><a href="wire.html">WIRE</a></li>
+				<li><a href="list.html">LIST</a></li>
+				<li><a href="examples.html">EXAMPLES</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="content">
+		<h1 id="al-wire">AL Wire</h1>
+<h3 id="current">Current</h3>
+<p>Current is a pulse. It moves instantly along the entire wire. When
+block gets powered by current, it alters its state either from A to B or
+B to A:</p>
+<table>
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>^</code></td>
+<td><code>v</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code></td>
+<td><code>&gt;</code></td>
+</tr>
+<tr class="odd">
+<td><code>#</code></td>
+<td><code>*</code></td>
+</tr>
+<tr class="even">
+<td><code>i</code></td>
+<td><code>d</code></td>
+</tr>
+<tr class="odd">
+<td><code>a</code></td>
+<td><code>s</code></td>
+</tr>
+<tr class="even">
+<td><code>m</code></td>
+<td><code>n</code></td>
+</tr>
+</tbody>
+</table>
+<p>Wire can transport current.<br />
+There are 5 wire blocks:</p>
+<h4 id="section"><code>@</code></h4>
+<p>Laser detector. Interacts with Laser the same exact way as a
+<code>*</code> block does. But unlike <code>*</code>, <code>@</code>
+sends pulse over any connected wire when it gets evaluated.</p>
+<p>Example:</p>
+<pre><code>         O----------^
+{&gt; &gt; v   |
+     @---+--O
+     v   |  |
+   ^ &lt;   O--O</code></pre>
+<p>A detector that gets activated every 5 ticks. It rotates a connected
+mirror.</p>
+<p>// TODO: demonstrate double button single tick double state
+switch</p>
+<h4 id="z"><code>z</code></h4>
+<p>Like <code>@</code> but ignores lasers that have zero value.</p>
+<h4 id="section-1"><code>-</code>, <code>|</code></h4>
+<p>Vertical and horizontal wire respectively.</p>
+<h4 id="section-2"><code>+</code></h4>
+<p>Wire crossing. Wires are not connected.<br />
+For example:<br />
+3 unconnected wires crossing each other.</p>
+<pre><code> | |
+-+-+-
+ | |
+-+-O
+ |</code></pre>
+<p>The same code but smaller:</p>
+<pre><code> ||
+-++-
+-+O
+ |</code></pre>
+<h4 id="o"><code>O</code></h4>
+<p>Wire crossing. Wires are connected. Only horizontal wires above and
+below, vertical wires to the left and right and other wire crossing are
+connected.<br />
+For example:<br />
+Two unconnected wires turning right</p>
+<pre><code>O--
+|O-
+||</code></pre>
+	</div>
+</body>
+</html>
+

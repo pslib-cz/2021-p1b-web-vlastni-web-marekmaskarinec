@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>core</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li class="homepage"><a href="index.html">ASCIILASERS</a></li>
+				<li><a href="wire.html">WIRE</a></li>
+				<li><a href="list.html">LIST</a></li>
+				<li><a href="examples.html">EXAMPLES</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="content">
+		<h1 id="al-core">AL Core</h1>
+<p>The core module implements basic laser modifiers, mirrors, stdout and
+stdin.</p>
+<h2 id="mirrors">Mirrors</h2>
+<p>There are 4 mirror blocks:<br />
+Symbol | Description ——-|————- <code>^</code> | Reflects all lasers up
+<code>v</code> | Reflects all lasers down <code>&gt;</code> | Reflects
+all lasers right <code>&lt;</code> | Reflects all lasers left</p>
+<h2 id="laser-modifiers">Laser modifiers</h2>
+<h3 id="regular-modifiers">Regular modifiers:</h3>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 51%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Description</th>
+<th>Number of inputs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>*</code></td>
+<td>Outputs unmodified input</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><code>i</code></td>
+<td>Increments the input by 1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><code>d</code></td>
+<td>Decrements the input by 1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><code>#</code></td>
+<td>Never outputs anything</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><code>m</code></td>
+<td>Multiplication</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><code>n</code></td>
+<td>Division</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td><code>a</code></td>
+<td>Addition</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><code>s</code></td>
+<td>Subtraction</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td><code>l</code></td>
+<td>Modulo</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><code>:</code></td>
+<td>Duplicator Reemits laser twice in the upcoming two ticks,
+buffered</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><code>?</code></td>
+<td>Compare the two laster and outputs 0 if they are equal, 1 if the
+first laser is bigger and 2 if the seconds lasers is bigger</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="any-of-0123456789abcdef">Any of
+<code>0123456789ABCDEF</code></h3>
+<p>Sets the laser frequency to that value (hexadecimal)<br />
+TODO: could be better</p>
+<h2 id="io">IO</h2>
+<h3 id="section"><code>$</code></h3>
+<p>Prints the frequency of the incoming laser to stdout (in base 10),
+followed by newline.</p>
+<h3 id="section-1"><code>&amp;</code></h3>
+<p>Same as <code>$</code> but prints value as utf32 character and no
+newline is inserted.</p>
+<h3 id="section-2"><code>{</code></h3>
+<p>The start point of a program.<br />
+Emits a value of <code>1</code> and then is inactive for the rest of the
+execution.</p>
+<h3 id="section-3"><code>}</code></h3>
+<p>The end point of a program.<br />
+Terminates the program on any laser interaction and uses the laser value
+as a exit code.</p>
+<h3 id="section-4"><code>_</code></h3>
+<p>When laser hits this blocks, a single byte is read from stdin. If
+there is no byte on stdin, the evaluation of this block waits until
+there is one.</p>
+<h2 id="functions">Functions</h2>
+<p>Functions bodies are surrouded by a frame marked by the
+<code>/</code> and <code>\</code> characters in its corners.</p>
+<p>There can be no blocks at the function frame, except for function
+name which follows immediately after the top left <code>/</code> and
+bottom left <code>\</code>.</p>
+<p>Example:</p>
+<pre><code>Outside
+/name       \
+ inside
+ also inside
+  unsafe --&gt;x
+\name       /</code></pre>
+<p>Becomes</p>
+<pre><code>Outside
+/iiii#######\
+#inside     #
+#also inside#
+# unsafe --&gt;#
+\oooo#######/</code></pre>
+<p>The <code>i</code> and <code>o</code> blocks on the border here
+represent input and output slots reprectively.</p>
+<pre><code>/abcd  \
+ vvvv
+ $&amp;id
+   vv
+
+\abcd  /
+
+{ ****&gt;
+  vvvv
+
+ !abcd
+    vv
+    $
+     &gt;  }</code></pre>
+<p>Here, the <code>abcd</code> function prints the first two slots, the
+last two slots are modified and return throught the output slots. The
+function is then called with some values demonstrating the function
+calling syntax.</p>
+<p>Function calls have to start with <code>!</code> and end with white
+space.</p>
+	</div>
+</body>
+</html>
+
