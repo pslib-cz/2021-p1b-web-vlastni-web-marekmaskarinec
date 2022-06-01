@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>examples</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li class="homepage"><a href="index.html">ASCIILASERS</a></li>
+				<li><a href="docs.html">DOCS</a></li>
+				<li><a href="examples.html">EXAMPLES</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="content" id="content">
+		<h1 id="examples">Examples</h1>
+<p>A collection of examples of AsciiLasers code.</p>
+<h2 id="hello-world">Hello world</h2>
+<p>Prints hello world to stdout.</p>
+<pre><code>         [h   e   l   l   o   _   w   o   r   l   d]
+{&gt;A&gt;*&gt; m&gt; *&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;i&gt;d&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*&gt;*
+    v     v v v v v v v v v v v v v v v v v v v v v v v
+    &gt;  ^                          i F
+                                  v v
+            4   1   8   8   B F F i i   B   E   8
+            v   v   v   v   v v v v v   v   v   v
+     &amp;   &lt;a &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt; &lt;</code></pre>
+<h2 id="buffer-parallelizer-3">Buffer parallelizer 3</h2>
+<p>With the input of 3 consecutive lasers ended by a 0 laser, outputs
+the 3 lasers in parallel. This can be used as an example for creating
+bigger parallelizer.</p>
+<pre><code>    v
+    
+ v O&gt;*&gt;  v
+   |v    v
+O--O-@   v
+|&gt;  v    v
+|        v
+|        v
+|        v
+|        
+|v O&gt;*&gt;   v
+|  |v     v
+O--O-@    v
+|&gt;  v     v
+|        
+|        
+|v O&gt;*&gt;    v
+|  |v
+O--O-@
+|&gt;  v
+|  
+|  
+O---@    vvv</code></pre>
+<h2 id="buffer-serializer-3">Buffer serializer 3</h2>
+<p>Serializes 3 parallel lasers into a laser buffer. The left laser is
+the first one.</p>
+<pre><code>  vvv
+0&lt;*vv
+v vvv
+   vv
+    v
+&gt; &gt;&gt;&gt;v</code></pre>
+	</div>
+</body>
+</html>
+
