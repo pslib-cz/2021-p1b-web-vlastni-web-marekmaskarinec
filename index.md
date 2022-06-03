@@ -5,7 +5,7 @@
 </div>
 <div class="content" id="content">
 
-<span id="content-start" />
+<span id="content-start"></span>
 
 AsciiLasers is an esoteric text based visual programming language. The language
 is based around lasers which travel between blocks and mirrors on a board.

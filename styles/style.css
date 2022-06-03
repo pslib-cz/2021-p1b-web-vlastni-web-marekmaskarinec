@@ -16,6 +16,10 @@ a {
 	color: blue;
 }
 
+a::before {
+	content: "-> ";
+}
+
 div.main-header {
 	height: 100vh;
 	text-align: center;
@@ -34,6 +38,10 @@ h1.main-header {
 a.arrow {
 	text-decoration: none;
 	color: var(--bg-color);
+}
+
+a.arrow::before {
+	content: "";
 }
 
 header {
@@ -69,12 +77,17 @@ header a:hover {
 	color: lightgray;
 }
 
+header a::before {
+	content: "";
+}
+
 .content {
 	margin: 5% auto;
 	margin-top: 0;
 	margin-bottom: 0;
 	font-size: 150%;
 	max-width: 50%;
+	font-family: 'Nuosu SIL', serif;
 }
 
 @media (max-width: 1090px) {
