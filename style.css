@@ -118,72 +118,11 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: sans-serif;
 }
 
-/*body {
-	background-color: var(--bg-color);
-	color: var(--fg-color);
-	font-family: sans-serif;
-	margin: 0;
+footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
-p {
-	font-family: serif;
+footer p {
+	font-size: 60%;
 }
-
-header {
-	background-color: var(--fg-color);
-	color: var(--bg-color);
-}
-
-nav ul {
-	list-style-type: none;
-}
-
-nav ul li {
-	display: inline;
-	float: right;
-	font-size: 150%;
-}
-
-nav ul li.homepage {
-	float: left;
-}
-
-nav ul li a {
-	display: block;
-	padding-left: var(--nav-bar-spacing);
-	padding-right: var(--nav-bar-spacing);
-	text-decoration: none;
-	color: var(--bg-color);
-}
-
-nav ul li a:hover {
-	color: var(--fg-color);
-	background-color: var(--bg-color);
-	transition: 200ms linear;
-}
-
-div.main-header {
-	min-height: 100vh;
-	min-width: 100vw;
-	text-align: center;
-	background-color: var(--fg-color);
-	color: var(--bg-color)
-}
-
-h1.main-header {
-	font-size: 600%;
-	padding-top: 30vh;
-}
-
-a.arrow {
-	text-decoration: none;
-}
-
-article {
-	max-width: 80ch;
-	font-size: 200%;
-}
-
-@media (max-width: 1090px) {
-	
-}*/

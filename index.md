@@ -72,7 +72,7 @@ this still is ] this is not
 There are currently three AsciiLasers implementations, non of which are complete.
 [asciilasers-go](https://github.com/marekmaskarinec/asciilasers-go) which supports
 core except functions and has somewhat working wire implementation. [asciilasers-cs](https://github.com/asciilasers-cs/asciilasers-cs) it only supports core (without functions),
-but is generally faster and hase better visualisations than asciilasers-go.
+but is generally faster and has better visualisations than asciilasers-go.
 Both of these implementations have been abandoned in favor of claser - a scheme
 implementation with a c vm, currently being developed in private.
 
